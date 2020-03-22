@@ -28,7 +28,7 @@ def get_japanese_emoticon(yaml_file, w_emoticon)
 
     end
   end
-   puts "Sorry, that emoticon was not found"
+   return "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(yaml_file,j_emoticon)
@@ -39,6 +39,6 @@ def get_english_meaning(yaml_file,j_emoticon)
       return hash[:get_meaning][j_emoticon]
     end
   end
-  puts "Sorry, that emoticon was not found"
+  return "Sorry, that emoticon was not found"
 end
 
