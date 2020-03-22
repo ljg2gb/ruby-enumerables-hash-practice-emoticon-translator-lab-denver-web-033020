@@ -25,10 +25,10 @@ def get_japanese_emoticon(yaml_file, w_emoticon)
   hash[:get_emoticon].each do |key, value|
     if key == w_emoticon
       return hash[:get_emoticon][w_emoticon]
-    else
 
     end
   end
+   puts "Sorry, that emoticon was not found"
 end
 
 def get_english_meaning(yaml_file,j_emoticon)
