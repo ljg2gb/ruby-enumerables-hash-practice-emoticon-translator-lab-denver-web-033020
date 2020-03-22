@@ -33,12 +33,13 @@ end
 
 def get_english_meaning(yaml_file,j_emoticon)
   hash = load_library(yaml_file)
-  hash[:get_meaning].each do |key, value|
-    #binding.pry
-    if key == j_emoticon
-      return hash[:get_meaning][j_emoticon]
-    end
-  end
-  return "Sorry, that emoticon was not found"
+  hash[:get_meaning][j_emoticon] ? hash[:get_meaning][j_emoticon] : "Sorry, that emoticon was not found"
+  # hash[:get_meaning].each do |key, value|
+  #   #binding.pry
+  #   if key == j_emoticon
+  #     return hash[:get_meaning][j_emoticon]
+  #   end
+  # end
+  # return "Sorry, that emoticon was not found"
 end
 
